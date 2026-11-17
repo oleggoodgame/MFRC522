@@ -167,7 +167,7 @@ void setup()
 
 void loop()
 {
-  if (mfrc522.PICC_IsNewCardPresent() || mfrc522.PICC_ReadCardSerial())
+  if (mfrc522.PICC_IsNewCardPresent() && mfrc522.PICC_ReadCardSerial())
   {
     for (byte i = 0; i < 6; i++)
     {
